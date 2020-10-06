@@ -1,0 +1,13 @@
+Package: ProteinMicroarrayApp
+Title: Protein Microarray App
+Version: 0.0.0.9000
+Authors@R: person('Weronika', 'Schary', email = 'weronika.schary@hs-furtwangen.de', role = c('cre', 'aut'))
+Description: PKG_DESC.
+License: GPL-3
+Imports: 
+    config,
+    golem,
+    shiny
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
