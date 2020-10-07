@@ -17,6 +17,16 @@
 ## Add one line by package you want to add as dependency
 usethis::use_package( "thinkr" )
 
+usethis::use_package("shiny")
+usethis::use_package("EBImage")
+usethis::use_package("shinyjs")
+usethis::use_package("shinythemes")
+usethis::use_package("shinyFiles")
+usethis::use_package("DT")
+usethis::use_package("fs")
+usethis::use_package("rmarkdown")
+usethis::use_package("ggplot2")
+
 ## Add modules ----
 ## Create a module infrastructure in R/
 golem::add_module( name = "name_of_module1" ) # Name of the module
