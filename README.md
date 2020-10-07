@@ -23,14 +23,14 @@ be installed automatically.
 ```{r, eval = FALSE}
 ## Install package remotes
 if(!require(remotes)) install.packages("remotes")
-## Install package MultiFlow
+## Install package ProteinMicroarrayApp
 remotes::install_github("scharywe/ProteinMicroarrayApp", build_vignettes = TRUE)
 ```
 
 ## Start App
 
 ```{r}
-MultiFlow::runMultiFlowApp()
+ProteinMicroarrayApp::run_app()
 ```
 
 
