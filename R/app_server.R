@@ -381,9 +381,9 @@ app_server <- function( input, output, session ) {
                          BG.method, AM, Med, 
                          check.names = FALSE)
         if(inherits(try(IntensData, silent = TRUE), "try-error"))
-          IntensData <<- DF
+          IntensData <<- stack(DF)
         else
-          IntensData <<- rbind(IntensData, DF)
+          IntensData <<- cbind(IntensData, DF)
         
         output$intens <- renderDT({
           DF <- IntensData
@@ -438,9 +438,9 @@ app_server <- function( input, output, session ) {
                            check.names = FALSE)
         }
         if(inherits(try(IntensData, silent = TRUE), "try-error"))
-          IntensData <<- DF
+          IntensData <<- stack(DF)
         else
-          IntensData <<- rbind(IntensData, DF)
+          IntensData <<- cbind(IntensData, DF)
         
         output$intens <- renderDT({
           DF <- IntensData
