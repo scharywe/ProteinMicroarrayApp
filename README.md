@@ -24,7 +24,7 @@ be installed automatically.
 ## Install package remotes
 if(!require(remotes)) install.packages("remotes")
 ## Install package ProteinMicroarrayApp
-remotes::install_github("scharywe/ProteinMicroarrayApp", build_vignettes = TRUE)
+remotes::install_github("scharywe/ProteinMicroarrayApp", ref="testing")
 ```
 
 ## Start App
