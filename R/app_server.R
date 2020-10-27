@@ -5,7 +5,7 @@
 #' @import shiny shinyFiles EBImage
 #' @importFrom shinythemes shinytheme
 #' @importFrom DT DTOutput renderDT datatable
-#' @import tidyr
+#' @importFrom tidyr gather
 #' @noRd
 app_server <- function( input, output, session ) {
   # List the first level callModules here
