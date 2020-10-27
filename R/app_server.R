@@ -2,7 +2,10 @@
 #' 
 #' @param input,output,session Internal parameters for {shiny}. 
 #'     DO NOT REMOVE.
-#' @import shiny 
+#' @import shiny shinyFiles EBImage
+#' @importFrom shinythemes shinytheme
+#' @importFrom DT DTOutput renderDT datatable
+#' @import tidyr
 #' @noRd
 app_server <- function( input, output, session ) {
   # List the first level callModules here
