@@ -390,8 +390,8 @@ app_server <- function( input, output, session ) {
         mean_colnames <- all_colnames[grepl("Mean", all_colnames, fixed=TRUE)]
         median_colnames <- all_colnames[grepl("Median", all_colnames, fixed=TRUE)]
         
-        mean_table <- gather(DF[mean_colnames], mean, mean)
-        median_table <- gather(DF[median_colnames], median, median)
+        mean_table <- tidyr::gather(DF[mean_colnames], mean, mean)
+        median_table <- tidyr::gather(DF[median_colnames], median, median)
         
         DF <- cbind(mean_table, median_table)
         DF <- subset(DF, select= c(-1,-3))
@@ -473,8 +473,8 @@ app_server <- function( input, output, session ) {
         mean_colnames <- all_colnames[grepl("Mean", all_colnames, fixed=TRUE)]
         median_colnames <- all_colnames[grepl("Median", all_colnames, fixed=TRUE)]
         
-        mean_table <- gather(DF[mean_colnames], mean, mean)
-        median_table <- gather(DF[median_colnames], median, median)
+        mean_table <- tidyr::gather(DF[mean_colnames], mean, mean)
+        median_table <- tidyr::gather(DF[median_colnames], median, median)
         
         DF <- cbind(mean_table, median_table)
         DF <- subset(DF, select= c(-1,-3))
