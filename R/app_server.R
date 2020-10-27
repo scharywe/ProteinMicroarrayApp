@@ -380,6 +380,32 @@ app_server <- function( input, output, session ) {
         DF <- data.frame("File" = shinyImageFile$filename,
                          BG.method, AM, Med, 
                          check.names = FALSE)
+        
+        all_colnames <- colnames(DF)
+        
+        table_info <- all_colnames[1:5]
+        mean_colnames <- all_colnames[grepl("Mean", all_colnames, fixed=TRUE)]
+        median_colnames <- all_colnames[grepl("Median", all_colnames, fixed=TRUE)]
+        
+        mean_table <- gather(DF[mean_colnames], mean, mean)
+        median_table <- gather(DF[median_colnames], median, median)
+        
+        DF <- cbind(mean_table, median_table)
+        DF <- subset(DF, select= c(-1,-3))
+        
+        letters <- "ABCDEFGFIJKLMNOPQRSTUVWXYZ"
+        letters <- substr(letters, 1, input$ver)
+        numbers <- 1:input$hor
+        
+        pos <- NULL
+        for (i in unlist(strsplit(letters, split=""))) {
+          for (j in numbers) {
+            pos <- c(pos, paste(i,j, sep=""))
+          }
+        }
+        
+        DF <- cbind(pos, DF)
+        
         if(inherits(try(IntensData, silent = TRUE), "try-error"))
           IntensData <<- stack(DF)
         else
@@ -437,6 +463,32 @@ app_server <- function( input, output, session ) {
                            BG.method, AM, Med, 
                            check.names = FALSE)
         }
+        
+        all_colnames <- colnames(DF)
+        
+        table_info <- all_colnames[1:5]
+        mean_colnames <- all_colnames[grepl("Mean", all_colnames, fixed=TRUE)]
+        median_colnames <- all_colnames[grepl("Median", all_colnames, fixed=TRUE)]
+        
+        mean_table <- gather(DF[mean_colnames], mean, mean)
+        median_table <- gather(DF[median_colnames], median, median)
+        
+        DF <- cbind(mean_table, median_table)
+        DF <- subset(DF, select= c(-1,-3))
+        
+        letters <- "ABCDEFGFIJKLMNOPQRSTUVWXYZ"
+        letters <- substr(letters, 1, input$ver)
+        numbers <- 1:input$hor
+        
+        pos <- NULL
+        for (i in unlist(strsplit(letters, split=""))) {
+          for (j in numbers) {
+            pos <- c(pos, paste(i,j, sep=""))
+          }
+        }
+        
+        DF <- cbind(pos, DF)
+        
         if(inherits(try(IntensData, silent = TRUE), "try-error"))
           IntensData <<- stack(DF)
         else
