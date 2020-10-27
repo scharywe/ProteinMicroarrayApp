@@ -45,8 +45,8 @@ app_ui <- function(request) {
                                ),
                                #radioButtons("color", label = ("Color Mode"), choices = list("Color" = 1, "Greyscale" = 2), selected = 1),
                                
-                               sliderInput("hor", "Number of horizontal cells:", min = 10, max = 50,  value = 19),
-                               sliderInput("ver", "Number of vertical cells:", min = 10, max = 50,  value = 19)
+                               sliderInput("hor", "Number of horizontal cells:", min = 10, max = 30,  value = 19),
+                               sliderInput("ver", "Number of vertical cells:", min = 10, max = 30,  value = 19)
                              ), # END OF SIDEBAR PANEL
                              mainPanel(
                                HTML(
