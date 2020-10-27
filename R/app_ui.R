@@ -5,7 +5,6 @@
 #' @import shiny shinyFiles EBImage
 #' @importFrom shinythemes shinytheme
 #' @importFrom DT DTOutput renderDT datatable
-#' @importFrom tidyr gather
 #' @noRd
 app_ui <- function(request) {
   tagList(
