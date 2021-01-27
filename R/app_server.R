@@ -5,6 +5,7 @@
 #' @import shiny shinyFiles EBImage
 #' @importFrom shinythemes shinytheme
 #' @importFrom DT DTOutput renderDT datatable
+#' @import plotly
 #' @noRd
 app_server <- function(input, output, session) {
   
