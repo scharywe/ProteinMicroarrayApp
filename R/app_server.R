@@ -6,6 +6,7 @@
 #' @importFrom shinythemes shinytheme
 #' @importFrom DT DTOutput renderDT datatable
 #' @import plotly
+#' @import tidyr
 #' @noRd
 app_server <- function(input, output, session) {
   
