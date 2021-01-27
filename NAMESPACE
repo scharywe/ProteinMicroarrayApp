@@ -2,12 +2,12 @@
 
 export(run_app)
 import(EBImage)
+import(plotly)
 import(shiny)
 import(shinyFiles)
 importFrom(DT,DTOutput)
 importFrom(DT,datatable)
 importFrom(DT,renderDT)
-importFrom(tidyr, gather)
 importFrom(config,get)
 importFrom(golem,activate_js)
 importFrom(golem,add_resource_path)
