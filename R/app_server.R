@@ -740,7 +740,7 @@ app_server <- function(input, output, session) {
               data <- cbind(x,data)
               
               
-              fig <- plot_ly(type="scatter")
+              fig <- plotly(type="scatter")
               
               for(i in names(p_lines)) {
                 # fig <- fig %>% plotly::add_trace(data=data, x = ~x, y = as.formula(paste0("~`", i, "`")), name = i, mode="scatter")
