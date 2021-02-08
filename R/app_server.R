@@ -231,8 +231,8 @@ app_server <- function(input, output, session) {
     isolate({
       p <- input$plot_brush
       MAX <- dim(shinyImageFile$shiny_img_final)[1:2]
-      colcuts <- seq(1, MAX[1], length.out = input$hor+1)
-      rowcuts <- seq(1, MAX[2], length.out = input$ver+1)
+      colcuts <- seq(p$xmin, p$xmax, length.out = input$hor+1)
+      rowcuts <- seq(p$ymin, p$ymax, length.out = input$ver+1)
       
       segmentation.list <- vector("list", length = input$hor)  
       count <- 0
