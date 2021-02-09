@@ -77,7 +77,7 @@ app_server <- function(input, output, session) {
     output$rotatePanel <- renderUI({
       tagList(
         sliderInput("rotate", "Rotate image",
-                    min=-90, max=90, value=0),
+                    min=-45, max=45, value=0),
         actionButton("rotateCCW", "-90"),
         actionButton("rotateCW", "+90"),
         actionButton("fliphor", "FH"),
